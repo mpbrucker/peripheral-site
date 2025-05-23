@@ -12,16 +12,20 @@ const IndexPage = ({ data }) => {
         placeholder="none"
         src="../images/ps-logo.png"
       />
-      <h2>Peripheral Study</h2>
-      <ul>
-        {
-          data.allMdx.nodes.map(node => (
-            <li key={node.id}>
-              {node.frontmatter.title}
-            </li>
-          ))
-        }
-      </ul>
+      <h2>Notes on Peripheral Study</h2>
+      <div className="post-list">
+        <ol>
+          {
+            data.allMdx.nodes.map(node => (
+              <div key={node.id} className="post-list-item">
+                <li>
+                  {node.frontmatter.title}
+                </li>
+              </div>
+            ))
+          }
+        </ol>
+      </div>
     </Layout>
   )
 }
