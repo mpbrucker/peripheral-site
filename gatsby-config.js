@@ -16,9 +16,22 @@ module.exports = {
   }, {
     resolve: 'gatsby-source-filesystem',
     options: {
-      "name": "pages",
-      "path": "./src/pages/"
+      "name": "posts",
+      "path": `${__dirname}/posts/`
     },
-    __key: "pages"
+    __key: "posts"
+  },
+  {
+    resolve: `gatsby-omni-font-loader`,
+    options: {
+      enableListener: true,
+      preconnect: [`https://fonts.googleapis.com`, `https://fonts.gstatic.com`],
+      web: [
+        {
+          name: `Libre Baskerville`,
+          file: `https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap`,
+        },
+      ],
+    },
   }]
 };

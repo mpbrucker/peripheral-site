@@ -4,8 +4,7 @@
       BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
       sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
       "Noto Color Emoji";
-    --fontFamily-serif: "Merriweather", "Georgia", Cambria, "Times New Roman",
-      Times, serif;
+    --fontFamily-serif: "Libre Baskerville";
     --lineHeight-none: 1;
     --lineHeight-tight: 1.1;
     --lineHeight-normal: 1.5;
@@ -32,6 +31,11 @@ body {
     margin: 0 0;
 }
 
+h2 {
+    font-size: var(--fontSize-6);
+    font-family: var(--fontFamily-serif);
+}
+
 .global-header {
     background-color: red;
 }
@@ -39,8 +43,16 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin: 50px;
 }
 
 .content {
     max-width: var(--maxWidth-content);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-img {
+    max-width: 150px;
 }
