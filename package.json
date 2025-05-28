@@ -15,7 +15,10 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
     "@mdx-js/react": "^3.1.0",
+    "@mui/material": "^7.1.0",
     "gatsby": "^5.14.1",
     "gatsby-omni-font-loader": "^2.0.2",
     "gatsby-plugin-image": "^3.14.0",
