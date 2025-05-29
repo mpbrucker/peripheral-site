@@ -45,7 +45,11 @@ h2 {
 
 .page-subtitle-wrapper {
     text-align: justify;
-    width:100%
+    width:100%;
+    margin: 2vw 0;
+    font-size: 24px;
+    font-size: clamp(12px, 1.5vw, 1.5vw);
+    color: var(--color-text-light);
 }
   
 .page-subtitle-wrapper:after {
@@ -80,7 +84,11 @@ h3 {
 }
 
 .logo-img {
-    max-width: 100px;
+    width: 100%;
+}
+
+.main-page-header {
+    width: 100%;
 }
 
 .post-list {
@@ -106,8 +114,20 @@ h3 {
     flex-direction: row;
 }
 
+.post-list-item-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
 .post-list-item-header h3 {
     margin: 0 0;
+}
+
+.post-list-item-header h5 {
+    margin: 0 0;
+    color: var(--color-text-light);
 }
 
 .post-list-item-content {
@@ -116,4 +136,15 @@ h3 {
 
 .post-list-item-content p {
     margin: 0 0;
+}
+
+.subscribe-form-root {
+    display: flex;
+    flex-direction: row;
+}
+
+.subscribe-form-input {
+    line-height: 24px;
+    width: 175px;
+    margin: 5px 0;
 }
