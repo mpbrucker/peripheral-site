@@ -1,8 +1,8 @@
 import * as React from 'react'
 import Layout from '../components/layout'
-import { graphql } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 import logo from "../images/peripheral-study.svg";
-import { Form, TextField } from "radix-ui";
+import { Form } from "radix-ui";
 
 const IndexPage = ({ data }) => {
   return (
@@ -18,15 +18,18 @@ const IndexPage = ({ data }) => {
         <ol>
           {
             data.allMdx.nodes.map(node => (
+              <Link to={`/${node.frontmatter.slug}`} className="post-list-item-link">
                 <li key={node.id} className="post-list-item">
-                  <div className = "post-list-item-header">
-                    <h3>{node.frontmatter.title}</h3>
-                    <h5>{node.frontmatter.date}</h5>
-                  </div>
-                  <div className = "post-list-item-content">
-                    <p>{node.frontmatter.description}</p>
-                  </div>
+                    <div className = "post-list-item-header">
+                      <h3>{node.frontmatter.title}</h3>
+                      <h5>{node.frontmatter.date}</h5>
+                    </div>
+                    <div className = "post-list-item-content">
+                      <p>{node.frontmatter.description} <i>Read more</i></p>
+                    </div>
                 </li>
+              </Link>
+
             ))
           }
         </ol>
@@ -36,8 +39,12 @@ const IndexPage = ({ data }) => {
       </h2>
 
       <div className = "subscribe-container">
-        <Form.Root className="subscribe-form-root">
-          <Form.Field name="email">
+        <p className="subscribe-subtitle">Subscribe to email newsletter</p>
+        <Form.Root className="subscribe-form-root" 
+          action="https://gmail.us13.list-manage.com/subscribe/post?u=abfd043ab1f43a59c3d6e2b53&amp;id=763f4bc72a&amp;f_id=00c04ce1f0" 
+          method="post"
+          target="_self">
+          <Form.Field name="EMAIL">
               <Form.Message className="subscribe-form-message" match="valueMissing">
                 Please enter your email
               </Form.Message>
@@ -45,18 +52,20 @@ const IndexPage = ({ data }) => {
                 Please provide a valid email
               </Form.Message>
             <Form.Control asChild>
-              <input className="subscribe-form-input" type="email" placeholder="youremail@example.com" required />
+              <input className="subscribe-form-input" id="mce-EMAIL" type="email" placeholder="youremail@example.com" required />
             </Form.Control>
           </Form.Field>
-
+          <div aria-hidden="true" className="subscribe-hidden"><input type="text" name="b_abfd043ab1f43a59c3d6e2b53_763f4bc72a" tabindex="-1" value=""/></div>
           <Form.Submit asChild>
-            <button className="subscribe-submit-button" >
-              Subscribe
-            </button>
+            <input type="submit" name="subscribe" value="Subscribe" className="subscribe-submit-button" />
           </Form.Submit>
         </Form.Root>
       </div>
-    </Layout>
+  
+      <footer className="global-footer">
+
+      </footer>
+    </Layout>    
   )
 }
 
@@ -68,6 +77,7 @@ export const query = graphql`
             date(formatString: "MMMM D, YYYY")
             title
             description
+            slug
           }
           id
         }

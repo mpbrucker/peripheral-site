@@ -107,6 +107,18 @@ h3 {
     flex-direction: column;
     align-items: flex-start;
     box-shadow: 0px 0px 5px #cccccc;
+    border-radius: 5px;
+}
+
+a.post-list-item-link {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+a.post-list-item-link:hover {
+    background-color: var(--color-text-light);
 }
 
 .post-list-item-content {
@@ -138,13 +150,50 @@ h3 {
     margin: 0 0;
 }
 
+.subscribe-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .subscribe-form-root {
     display: flex;
     flex-direction: row;
 }
 
+.subscribe-hidden {
+    position: absolute;
+    left: -5000px;
+}
+
 .subscribe-form-input {
-    line-height: 24px;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid var(--color-text-light);
+    line-height: 36px;
     width: 175px;
-    margin: 5px 0;
+    padding: 0 5px;
+}
+
+.subscribe-submit-button {
+    border-radius: 0 5px 5px 0;
+    border: 1px solid var(--color-text-light);
+    margin: 0 0 0 -1px;
+    background-color: var(--color-text-light);
+    color: var(--color-accent);
+    font-weight: 500;
+}
+
+.subscribe-submit-button:active {
+    background-color: var(--color-heading);
+}
+
+.subscribe-subtitle {
+    font-size: 24px;
+    font-size: clamp(18px, 1.5vw, 1.5vw);
+    color: var(--color-text-light);
+    margin: 10px 0;
+}
+
+.global-footer {
+    margin: 30px 0;
 }
