@@ -4,17 +4,27 @@ import { Link, graphql } from 'gatsby';
 import logo from "../images/peripheral-study.svg";
 import separator from "../images/main-page-separator.png";
 import star from "../images/peripheral-star.svg";
-import { Form } from "radix-ui";
-import SubscribeDialog from '../components/subscribe-dialog';
+import { Dialog } from "radix-ui";
 import SubscribeForm from '../components/subscribe-form';
-
-import "../components/dialog.css"
 
 const IndexPage = ({ data }) => {
   return (
     <Layout pageTitle="Home Page">
       
-      <SubscribeDialog></SubscribeDialog>
+      <Dialog.Root defaultOpen="true" modal="true">
+            <Dialog.Portal>
+            <Dialog.Overlay className="dialog-overlay" />
+            <Dialog.Content className="dialog-content">
+
+                <SubscribeForm></SubscribeForm>
+                <img className="footer-logo" src = {star} style={{marginTop: "60px"}} alt="SVG black star logo."/>
+                <Dialog.Close asChild>
+                    <button className="dialog-close-button">No thanks, I'd like to read it first</button>
+                </Dialog.Close>
+            </Dialog.Content>
+            </Dialog.Portal>
+        </Dialog.Root>
+
       <div className="main-page-header">
         <img src = {logo} alt="SVG text reading Notes on Peripheral Study."/>
         <div className = "page-subtitle-wrapper">
@@ -42,11 +52,9 @@ const IndexPage = ({ data }) => {
           }
         </ol>
       </div>
-      <div className="content-divider">
-      </div>
 
+      <div className="content-divider"></div>
       <SubscribeForm></SubscribeForm>
-
       <div className="content-divider"></div>
 
       <footer className="global-footer">
