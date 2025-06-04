@@ -31,6 +31,10 @@ module.exports = {
           name: `Libre Baskerville`,
           file: `https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap`,
         },
+        {
+          name: `Inter Tight`,
+          file: `https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900`
+        }
       ],
     },
   }]

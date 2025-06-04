@@ -1,9 +1,6 @@
 :root {
     --maxWidth-content: 66%;
-    --fontFamily-sans: "MontserratVariable", system-ui, -apple-system,
-      BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
-      sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-      "Noto Color Emoji";
+    --fontFamily-sans: "Inter Tight";
     --fontFamily-serif: "Libre Baskerville";
     --lineHeight-none: 1;
     --lineHeight-tight: 1.1;
@@ -30,7 +27,7 @@ body {
     background-color: var(--color-primary);
     color: var(--color-text);
     margin: 0 0;
-    font-family: var(--fontFamily-serif);
+    font-family: var(--fontFamily-sans);
 }
 
 h1 {
@@ -55,8 +52,9 @@ h2 {
     margin: 2vw 0;
     font-size: 24px;
     font-size: clamp(12px, 1.5vw, 1.5vw);
-    font-weight: 700;
-    color: var(--color-accent);
+    font-weight: 300;
+    font-family: var(--fontFamily-sans);
+    color: var(--color-text-light);
 }
   
 .page-subtitle-wrapper:after {
@@ -138,6 +136,8 @@ a.post-list-item-link {
 .post-list-item-content {
     display: flex;
     flex-direction: row;
+    font-family: var(--fontFamily-serif);
+    color: var(--color-text-light);
 }
 
 .post-list-item-header {
