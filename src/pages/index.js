@@ -2,6 +2,7 @@ import * as React from 'react'
 import Layout from '../components/layout'
 import { Link, graphql } from 'gatsby';
 import logo from "../images/peripheral-study.svg";
+import separator from "../images/main-page-separator.png";
 import { Form } from "radix-ui";
 
 const IndexPage = ({ data }) => {
@@ -11,9 +12,7 @@ const IndexPage = ({ data }) => {
       <span className = "page-subtitle-wrapper">
         thinking and practice for more critical living
       </span>
-      <h2>
-        *****
-      </h2>
+      <img className="main-page-separator" src={separator} alt="an abstract image of several dark blobs" />
       <div className="post-list">
         <ol>
           {

@@ -18,18 +18,24 @@
     --fontSize-5: 2.074rem;
     --fontSize-6: 2.488rem;
     --fontSize-7: 2.986rem;
-    --color-primary: #005b99;
-    --color-text: #1b1b1b;
-    --color-text-light: #505050;
-    --color-heading: #1a202c;
-    --color-heading-black: black;
-    --color-accent: #fffefa;
+    --color-primary: #fefcf6;
+    --color-text: #252422;
+    --color-text-light: #42403c;
+    --color-primary-darker: #e6e4df;
+    --color-accent: #a33b20;
+
   }
 
 body {
-    background-color: var(--color-accent);
+    background-color: var(--color-primary);
+    color: var(--color-text);
     margin: 0 0;
     font-family: var(--fontFamily-serif);
+}
+
+h1 {
+    font-size: var(--fontSize-7);
+    color: var(--color-text);
 }
 
 h2 {
@@ -49,7 +55,8 @@ h2 {
     margin: 2vw 0;
     font-size: 24px;
     font-size: clamp(12px, 1.5vw, 1.5vw);
-    color: var(--color-text-light);
+    font-weight: 700;
+    color: var(--color-accent);
 }
   
 .page-subtitle-wrapper:after {
@@ -106,9 +113,19 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    box-shadow: 0px 0px 5px #cccccc;
+    box-shadow: 0px 0px 2px var(--color-text-light);
     border-radius: 5px;
+
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
 }
+
+.post-list-item:hover {
+    background-color: var(--color-primary-darker);
+}
+
 
 a.post-list-item-link {
     color: inherit;
@@ -117,9 +134,6 @@ a.post-list-item-link {
     z-index: 1000;
 }
 
-a.post-list-item-link:hover {
-    background-color: var(--color-text-light);
-}
 
 .post-list-item-content {
     display: flex;
@@ -184,7 +198,7 @@ a.post-list-item-link:hover {
 }
 
 .subscribe-submit-button:active {
-    background-color: var(--color-heading);
+    background-color: var(--color-primary-darker);
 }
 
 .subscribe-subtitle {
@@ -196,4 +210,13 @@ a.post-list-item-link:hover {
 
 .global-footer {
     margin: 30px 0;
+}
+
+.post-content {
+    max-width: 60%;
+    text-align: center;
+}
+
+.main-page-separator {
+    max-width: 400px;
 }
