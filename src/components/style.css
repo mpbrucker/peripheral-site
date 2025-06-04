@@ -182,19 +182,22 @@ a.post-list-item-link {
 
 .subscribe-form-input {
     border-radius: 5px 0 0 5px;
+    background: var(--color-primary);
     border: 1px solid var(--color-text-light);
     line-height: 36px;
     width: 175px;
     padding: 0 5px;
+    height: 38px;
 }
 
 .subscribe-submit-button {
     border-radius: 0 5px 5px 0;
     border: 1px solid var(--color-text-light);
     margin: 0 0 0 -1px;
-    background-color: var(--color-text-light);
-    color: var(--color-accent);
-    font-weight: 500;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    font-weight: 700;
+    height: 40px;
 }
 
 .subscribe-submit-button:active {
@@ -203,9 +206,10 @@ a.post-list-item-link {
 
 .subscribe-subtitle {
     font-size: 24px;
-    font-size: clamp(18px, 1.5vw, 1.5vw);
-    color: var(--color-text-light);
-    margin: 10px 0;
+    font-size: clamp(24px, 2vw, 2vw);
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 0;
 }
 
 .global-footer {
@@ -219,4 +223,31 @@ a.post-list-item-link {
 
 .main-page-separator {
     max-width: 400px;
+}
+
+.main-page-header {
+    margin: 0 0 30px 0;
+}
+
+.content-divider {
+    width: 20px;
+    border-bottom: 1px solid var(--color-text);
+    margin: 30px 0;
+}
+
+.subscribe-form-email {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.subscribe-form-message {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.footer-attribution {
+    font-size: 14px;
+    font-weight: 100;
+    color: var(--text-light);
 }

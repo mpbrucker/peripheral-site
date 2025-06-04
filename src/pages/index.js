@@ -8,11 +8,13 @@ import { Form } from "radix-ui";
 const IndexPage = ({ data }) => {
   return (
     <Layout pageTitle="Home Page">
-      <img src = {logo} alt="SVG text reading Notes on Peripheral Study."/>
-      <span className = "page-subtitle-wrapper">
-        thinking and practice for more critical living
-      </span>
-      <img className="main-page-separator" src={separator} alt="an abstract image of several dark blobs" />
+      <div className="main-page-header">
+        <img src = {logo} alt="SVG text reading Notes on Peripheral Study."/>
+        <div className = "page-subtitle-wrapper">
+          thinking and practice for more critical living
+        </div>
+        <img className="main-page-separator" src={separator} alt="an abstract image of several dark blobs" />
+      </div>
       <div className="post-list">
         <ol>
           {
@@ -33,26 +35,26 @@ const IndexPage = ({ data }) => {
           }
         </ol>
       </div>
-      <h2>
-        *****
-      </h2>
+      <div className="content-divider">
+      </div>
 
+  
       <div className = "subscribe-container">
-        <p className="subscribe-subtitle">Subscribe to email newsletter</p>
+        <h2 className="subscribe-subtitle">Stay in Touch</h2>
+        <p>Subscribe to receive future Peripheral Study newsletters.</p>
         <Form.Root className="subscribe-form-root" 
           action="https://gmail.us13.list-manage.com/subscribe/post?u=abfd043ab1f43a59c3d6e2b53&amp;id=763f4bc72a&amp;f_id=00c04ce1f0" 
           method="post"
           target="_self">
           <Form.Field name="EMAIL">
-              <Form.Message className="subscribe-form-message" match="valueMissing">
-                Please enter your email
-              </Form.Message>
+            <div className="subscribe-form-email">
+              <Form.Control asChild>
+                <input className="subscribe-form-input" id="mce-EMAIL" type="email" placeholder="youremail@example.com" required />
+              </Form.Control>
               <Form.Message className="subscribe-form-message" match="typeMismatch">
-                Please provide a valid email
+                  <i>Please provide a valid email.</i>
               </Form.Message>
-            <Form.Control asChild>
-              <input className="subscribe-form-input" id="mce-EMAIL" type="email" placeholder="youremail@example.com" required />
-            </Form.Control>
+            </div>
           </Form.Field>
           <div aria-hidden="true" className="subscribe-hidden"><input type="text" name="b_abfd043ab1f43a59c3d6e2b53_763f4bc72a" tabindex="-1" value=""/></div>
           <Form.Submit asChild>
@@ -60,9 +62,13 @@ const IndexPage = ({ data }) => {
           </Form.Submit>
         </Form.Root>
       </div>
-  
-      <footer className="global-footer">
 
+      <div className="content-divider"></div>
+
+      <footer className="global-footer">
+        <div className="footer-attribution">
+          A website by Maddie Brucker
+        </div>
       </footer>
     </Layout>    
   )
