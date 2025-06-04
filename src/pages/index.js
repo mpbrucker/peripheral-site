@@ -3,6 +3,7 @@ import Layout from '../components/layout'
 import { Link, graphql } from 'gatsby';
 import logo from "../images/peripheral-study.svg";
 import separator from "../images/main-page-separator.png";
+import star from "../images/peripheral-star.svg";
 import { Form } from "radix-ui";
 
 const IndexPage = ({ data }) => {
@@ -40,7 +41,7 @@ const IndexPage = ({ data }) => {
 
   
       <div className = "subscribe-container">
-        <h2 className="subscribe-subtitle">Stay in Touch</h2>
+        <h2 className="subscribe-subtitle">stay in touch</h2>
         <p>Subscribe to receive future Peripheral Study newsletters.</p>
         <Form.Root className="subscribe-form-root" 
           action="https://gmail.us13.list-manage.com/subscribe/post?u=abfd043ab1f43a59c3d6e2b53&amp;id=763f4bc72a&amp;f_id=00c04ce1f0" 
@@ -67,8 +68,9 @@ const IndexPage = ({ data }) => {
 
       <footer className="global-footer">
         <div className="footer-attribution">
-          A website by Maddie Brucker
+          Design and words by Maddie Brucker
         </div>
+        <img className="footer-logo" src = {star} alt="SVG black star logo."/>
       </footer>
     </Layout>    
   )
