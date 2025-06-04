@@ -1,0 +1,109 @@
+.page-header {
+    /* width: 100%; */
+    min-height: 50px;
+    box-shadow: 0px 0px 5px #cccccc;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header-nav-links {
+    margin: 20px;
+}
+
+.dialog-overlay {
+	background-color: rgba(255, 255, 255, 0.9);
+	position: fixed;
+	inset: 0;
+    animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dialog-content {
+	background-color: white;
+	border-radius: 6px;
+	box-shadow: 0px 0px 2px #42403c;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 90vw;
+	max-width: 500px;
+	max-height: 85vh;
+	padding: 25px;
+    animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.dialog-content:focus {
+	outline: none;
+}
+
+.subscribe-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subscribe-form-root {
+    display: flex;
+    flex-direction: row;
+}
+
+.subscribe-hidden {
+    position: absolute;
+    left: -5000px;
+}
+
+.subscribe-form-input {
+    border-radius: 5px 0 0 5px;
+    background: var(--color-primary);
+    border: 1px solid var(--color-text-light);
+    font-size: 12px;
+    width: 175px;
+    padding: 0 5px;
+    height: 40px;
+    text-align: left;
+}
+
+.subscribe-submit-button {
+    border-radius: 0 5px 5px 0;
+    border: 1px solid var(--color-text-light);
+    margin: 0 0 0 -1px;
+    padding: 5px;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    font-weight: 700;
+    height: 30px;
+    font-size: 12px;
+}
+
+.subscribe-submit-button:active {
+    background-color: var(--color-primary-darker);
+}
+
+.subscribe-subtitle {
+    font-size: 24px;
+    font-size: clamp(24px, 2vw, 2vw);
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 0;
+}
+
+
+@keyframes overlayShow {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes contentShow {
+	from {
+		opacity: 0;
+		transform: translate(-50%, -48%) scale(0.96);
+	}
+	to {
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(1);
+	}
+}

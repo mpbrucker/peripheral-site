@@ -164,53 +164,6 @@ a.post-list-item-link {
     margin: 0 0;
 }
 
-.subscribe-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.subscribe-form-root {
-    display: flex;
-    flex-direction: row;
-}
-
-.subscribe-hidden {
-    position: absolute;
-    left: -5000px;
-}
-
-.subscribe-form-input {
-    border-radius: 5px 0 0 5px;
-    background: var(--color-primary);
-    border: 1px solid var(--color-text-light);
-    line-height: 36px;
-    width: 175px;
-    padding: 0 5px;
-    height: 38px;
-}
-
-.subscribe-submit-button {
-    border-radius: 0 5px 5px 0;
-    border: 1px solid var(--color-text-light);
-    margin: 0 0 0 -1px;
-    background-color: var(--color-primary);
-    color: var(--color-text);
-    font-weight: 700;
-    height: 40px;
-}
-
-.subscribe-submit-button:active {
-    background-color: var(--color-primary-darker);
-}
-
-.subscribe-subtitle {
-    font-size: 24px;
-    font-size: clamp(24px, 2vw, 2vw);
-    font-weight: 700;
-    color: var(--color-text);
-    margin: 0;
-}
 
 .global-footer {
     margin: 30px 0;
