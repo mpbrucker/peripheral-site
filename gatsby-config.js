@@ -6,7 +6,8 @@ module.exports = {
     title: `Peripheral Study`,
     siteUrl: `https://www.yourdomain.tld`
   },
-  plugins: ["gatsby-plugin-sass", "gatsby-plugin-image", "gatsby-plugin-sitemap", "gatsby-plugin-mdx", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
+  plugins: ["gatsby-plugin-sass", "gatsby-plugin-image", "gatsby-plugin-sitemap", "gatsby-plugin-mdx", "gatsby-plugin-sharp", "gatsby-transformer-sharp", 
+    {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "images",
@@ -20,6 +21,16 @@ module.exports = {
       "path": `${__dirname}/posts/`
     },
     __key: "posts"
+  },
+  {
+    resolve: `gatsby-plugin-manifest`,
+    options: {
+      name: `Peripheral Study`,
+      short_name: `Peripheral`,
+      start_url: `/`,
+      display: `standalone`,
+      icon: `src/images/icon.png`,
+    }
   },
   {
     resolve: `gatsby-omni-font-loader`,

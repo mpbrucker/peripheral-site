@@ -3,7 +3,7 @@ import PageHeader from './page-header';
 import "./style.css"
 
 
-const PostLayout = ({ pageTitle, children }) => {
+const PostLayout = ({ pageTitle, pageSubtitle, children }) => {
   return (
     <div className="global-wrapper">
       <PageHeader></PageHeader>
@@ -11,6 +11,7 @@ const PostLayout = ({ pageTitle, children }) => {
         <div className="content-wrapper">
             <div className="post-content">
                 <h1>{pageTitle}</h1>
+                <h3>{pageSubtitle}</h3>
                 {children}
             </div>
         </div>
