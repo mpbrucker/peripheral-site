@@ -166,7 +166,11 @@ a.post-list-item-link {
 
 
 .global-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 30px 0;
+    padding: 15px;
 }
 
 .main-page-separator {
@@ -260,7 +264,36 @@ a.post-list-item-link {
     line-height: 36px;
 }
 
-@media screen and (max-width: 768px) {
+.post-content h1 {
+    margin-bottom: 15px;
+}
+
+.post-subtitle {
+    color: var(--color-text-light);
+    font-weight: 200;
+    margin: 0;
+}
+
+.post-date {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-text-light);
+}
+
+.post-sub-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+}
+
+
+.full-width {
+    width: 100%;
+}
+
+
+@media screen and (max-width: 1024px) {
     .post-content {
         max-width: 100%;
     }
