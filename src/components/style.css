@@ -1,7 +1,8 @@
 :root {
-    --maxWidth-content: 50%;
+    --maxWidth-content: 66%;
+    --maxWidth-content-mobile: 100%;
     --fontFamily-sans: "Inter Tight";
-    --fontFamily-serif: "Libre Baskerville";
+    --fontFamily-serif: "Playfair Display";
     --lineHeight-none: 1;
     --lineHeight-tight: 1.1;
     --lineHeight-normal: 1.5;
@@ -23,11 +24,16 @@
 
   }
 
+html {
+    height: 100%;
+}
+
 body {
     background-color: var(--color-primary);
     color: var(--color-text);
     margin: 0 0;
     font-family: var(--fontFamily-sans);
+    height: 100%;
 }
 
 h1 {
@@ -53,7 +59,8 @@ h2 {
     font-size: 24px;
     font-size: clamp(12px, 1.5vw, 1.5vw);
     font-weight: 300;
-    font-family: var(--fontFamily-sans);
+    font-family: var(--fontFamily-serif);
+    font-style: italic;
     color: var(--color-text-light);
 }
   
@@ -80,12 +87,14 @@ h3 {
 }
 
 .content {
-    /* max-width: var(--maxWidth-content); */
+    max-width: var(--maxWidth-content);
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    justify-content: space-between;
+    height: 100vh;
 }
 
 .logo-img {
@@ -171,6 +180,7 @@ a.post-list-item-link {
     align-items: center;
     margin: 30px 0;
     padding: 15px;
+    width: 100%;
 }
 
 .main-page-separator {
@@ -178,14 +188,14 @@ a.post-list-item-link {
     max-width: 400px;
 }
 
-.main-page-header {
-    margin: 0 0 30px 0;
-}
-
 .content-divider {
     width: 20px;
     border-bottom: 1px solid var(--color-text);
     margin: 30px 0;
+}
+
+.subscribe-form-root {
+    margin: 10px;
 }
 
 .subscribe-form-email {
@@ -219,6 +229,7 @@ a.post-list-item-link {
 }
 
 .dialog-content {
+    z-index: 11;
 	background-color: var(--color-primary);
 	border-radius: 5px;
 	box-shadow: 0px 0px 2px var(--color-text);
@@ -226,7 +237,7 @@ a.post-list-item-link {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	padding: 50px;
+	padding: 25px;
     animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
 
     text-align: center;
@@ -292,10 +303,24 @@ a.post-list-item-link {
     width: 100%;
 }
 
+.main-overlay-placeholder {
+    opacity:    0.8; 
+    background: var(--color-primary); 
+    width:      100%;
+    height:     100%; 
+    z-index:    10;
+    top:        0; 
+    left:       0; 
+    position:   fixed; 
+}
+
 
 @media screen and (max-width: 1024px) {
     .post-content {
         max-width: 100%;
+    }
+    .content {
+        max-width: var(--maxWidth-content-mobile);
     }
 }
 

@@ -7,7 +7,8 @@ import "./components.css"
 const SubscribeForm = () => {
     return (
         <div className = "subscribe-container">
-        <h2 className="subscribe-subtitle">stay in touch</h2>
+        <h2 className="subscribe-subtitle">coming soon...
+        </h2>
         <p>Subscribe to receive future Peripheral Study newsletters.</p>
         <Form.Root className="subscribe-form-root" 
           action="https://gmail.us13.list-manage.com/subscribe/post?u=abfd043ab1f43a59c3d6e2b53&amp;id=763f4bc72a&amp;f_id=00c04ce1f0" 

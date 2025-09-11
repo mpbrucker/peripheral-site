@@ -35,6 +35,11 @@
     align-items: center;
 }
 
+.subscribe-container p {
+    font-family: var(--fontFamily-serif);
+    font-style: italic;
+}
+
 .subscribe-form-root {
     display: flex;
     flex-direction: row;
@@ -73,8 +78,8 @@
 }
 
 .subscribe-subtitle {
-    font-size: 24px;
-    font-size: clamp(24px, 2vw, 2vw);
+    font-size: 36px;
+    font-size: clamp(36px, 3vw, 3vw);
     font-weight: 700;
     color: var(--color-text);
     margin: 0;

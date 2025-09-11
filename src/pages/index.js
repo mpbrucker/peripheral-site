@@ -3,36 +3,36 @@ import Layout from '../components/layout'
 import { Link, graphql } from 'gatsby';
 import logo from "../images/peripheral-study.svg";
 import separator from "../images/main-page-separator.png";
-import star from "../images/peripheral-star.svg";
-import { Dialog } from "radix-ui";
+import star from "../images/peripheral-star.png";
+import { AlertDialog } from "radix-ui";
 import SubscribeForm from '../components/subscribe-form';
 
 const IndexPage = ({ data }) => {
   return (
-    <Layout pageTitle="Home Page">
+    <Layout pageTitle="Home">
+      <div className="main-overlay-placeholder"></div>
       
-      <Dialog.Root defaultOpen="true" modal="true">
-            <Dialog.Portal>
-            <Dialog.Overlay className="dialog-overlay" />
-            <Dialog.Content className="dialog-content">
+      <AlertDialog.Root defaultOpen="true">
+            <AlertDialog.Portal>
+            {/* <AlertDialog.Overlay className="dialog-overlay" /> */}
+            <AlertDialog.Content className="dialog-content">
 
                 <SubscribeForm></SubscribeForm>
-                <img className="footer-logo" src = {star} style={{marginTop: "60px"}} alt="SVG black star logo."/>
+                {/* <img className="footer-logo" src = {star} style={{marginTop: "60px"}} alt="SVG black star logo."/>
                 <Dialog.Close asChild>
                     <button className="dialog-close-button">No thanks, I'd like to read it first</button>
-                </Dialog.Close>
-            </Dialog.Content>
-            </Dialog.Portal>
-        </Dialog.Root>
+                </Dialog.Close> */}
+            </AlertDialog.Content>
+            </AlertDialog.Portal>
+        </AlertDialog.Root>
 
       <div className="main-page-header">
         <img src = {logo} alt="SVG text reading Notes on Peripheral Study."/>
         <div className = "page-subtitle-wrapper">
-          writings and rehearsals for more critical living
+          writings, rehearsals, and aesthetics for critical living
         </div>
-        <img className="main-page-separator" src={separator} alt="an abstract image of several dark blobs" />
       </div>
-      <div className="post-list">
+      {/* <div className="post-list">
         <ol>
           {
             data.allMdx.nodes.map(node => (
@@ -51,11 +51,11 @@ const IndexPage = ({ data }) => {
             ))
           }
         </ol>
-      </div>
+      </div> */}
 
-      <div className="content-divider"></div>
+      {/* <div className="content-divider"></div>
       <SubscribeForm></SubscribeForm>
-      <div className="content-divider"></div>
+      <div className="content-divider"></div> */}
 
       <footer className="global-footer">
         <div className="footer-attribution">
