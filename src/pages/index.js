@@ -67,21 +67,21 @@ const IndexPage = ({ data }) => {
   )
 }
 
-export const query = graphql`
-    query  {
-      allMdx(sort: { frontmatter: { date: DESC } }) {
-        nodes {
-          frontmatter {
-            date(formatString: "MMMM D, YYYY")
-            title
-            description
-            slug
-          }
-          id
-        }
-      }
-    }
-`
+// export const query = graphql`
+//     query  {
+//       allMdx(sort: { frontmatter: { date: DESC } }) {
+//         nodes {
+//           frontmatter {
+//             date(formatString: "MMMM D, YYYY")
+//             title
+//             description
+//             slug
+//           }
+//           id
+//         }
+//       }
+//     }
+// `
 
 export const Head = () => <title>Home Page</title>
 
