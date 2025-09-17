@@ -2,7 +2,6 @@ import * as React from 'react'
 import Layout from '../components/layout'
 import { Link, graphql } from 'gatsby';
 import logo from "../images/peripheral-study.svg";
-import separator from "../images/main-page-separator.png";
 import star from "../images/peripheral-star.png";
 import { AlertDialog } from "radix-ui";
 import SubscribeForm from '../components/subscribe-form';

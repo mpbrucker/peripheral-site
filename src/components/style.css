@@ -35,6 +35,10 @@ body {
     font-family: var(--fontFamily-sans);
     height: 100%;
 }
+a {
+    color: var(--color-text-light);
+    text-decoration: underline;
+}
 
 h1 {
     font-size: var(--fontSize-7);
