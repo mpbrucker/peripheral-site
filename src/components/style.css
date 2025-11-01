@@ -1,8 +1,7 @@
 @font-face {
     font-family: 'Jugador';
-    font-weight: 400;
     font-style: normal;
-    src: url("../fonts/JUGADOR-stocky.woff") format('woff');
+    src: url("/src/fonts/JUGADOR-stocky.woff") format('woff');
   }
 
 :root {
