@@ -1,0 +1,27 @@
+body {
+    background-color: var(--color-accent);
+    color: var(--color-primary-darker);
+}
+
+.home-page-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.home-page-title {
+    margin: 25px;
+    font-family: var(--fontFamily-display);
+    font-size: 10vw;
+}
+
+.home-page-content {
+    margin: 25px;
+    max-width: 28vw;
+    font-size: clamp(32px, 4vw, 48px);
+    font-family: var(--fontFamily-serif);
+    text-align: left;
+}
